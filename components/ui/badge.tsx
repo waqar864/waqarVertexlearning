@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { cn } from '@/lib/utils';
 
-type BadgeVariant = 'video' | 'lesson' | 'popular';
+type BadgeVariant = 'video' | 'lesson' | 'popular' | 'hero';
 
 const variantStyles: Record<BadgeVariant, string> = {
   video: 'bg-primary-100 text-primary-500',
   lesson: 'bg-[#EEF0FE] text-[#4F46E5]',
   popular: 'bg-primary-100 text-primary-500 font-semibold',
+  hero: 'bg-primary-100 text-primary-500 font-medium',
 };
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {

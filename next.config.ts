@@ -7,6 +7,15 @@ const nextConfig: NextConfig = {
   },
   cacheComponents: true,
   partialPrefetching: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'api.dicebear.com',
+        pathname: '/7.x/**',
+      },
+    ],
+  },
   turbopack: {
     rules: {
       "*.css": {

@@ -1,5 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { Bell } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Logo } from '@/components/brand/logo';
 
@@ -38,6 +40,23 @@ const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
               </Link>
             );
           })}
+
+          <button
+            aria-label="Notifications"
+            className="text-neutral-700 hover:text-primary-500 transition-colors"
+          >
+            <Bell size={20} />
+          </button>
+
+          <div className="w-8 h-8 rounded-full bg-linear-to-br from-primary-400 to-primary-600 flex items-center justify-center overflow-hidden">
+            <Image
+              src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix"
+              alt="User profile"
+              className="w-full h-full"
+              width={32}
+              height={32}
+            />
+          </div>
         </div>
       </nav>
     );
